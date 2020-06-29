@@ -3,7 +3,6 @@ import Moment from 'react-moment'
 import PropTypes from 'prop-types'
 
 const LogItem = ({ log }) => {
-	console.log(log)
 	return (
 		<li className='collection-item'>
 			<div>
