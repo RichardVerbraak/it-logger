@@ -93,11 +93,31 @@ export const addLog = (log) => {
 	}
 }
 
+export const deleteLog = (id) => {
+	return async (dispatch) => {
+		try {
+			setLoading()
+
+			await fetch(`/logs/${id}`, {
+				method: 'DELETE',
+			})
+
+			dispatch({
+				type: 'DELETE_LOG',
+				payload: id,
+			})
+		} catch (error) {
+			dispatch({
+				type: 'LOGS_ERROR',
+				payload: error.response.data,
+			})
+		}
+	}
+}
+
 export const updateLog = () => {}
 
 export const clearLogs = () => {}
-
-export const deleteLog = () => {}
 
 export const setCurrent = () => {}
 

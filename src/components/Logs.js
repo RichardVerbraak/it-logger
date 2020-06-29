@@ -32,8 +32,9 @@ const Logs = ({ loading, logs, getLogs }) => {
 	)
 }
 
+// I changed this to array since I set up my store/reducer differently than Brad's (and left out isRequired since it's null to start with)
 Logs.propTypes = {
-	logs: PropTypes.object.isRequired,
+	logs: PropTypes.array,
 	getLogs: PropTypes.func.isRequired,
 }
 
