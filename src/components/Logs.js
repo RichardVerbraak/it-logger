@@ -32,12 +32,12 @@ const Logs = ({ loading, logs, getLogs }) => {
 	)
 }
 
-// Logs.propTypes = {
-// 	logs: PropTypes.object.isRequired,
-// }
+Logs.propTypes = {
+	logs: PropTypes.object.isRequired,
+	getLogs: PropTypes.func.isRequired,
+}
 
 const mapStateToProps = (state) => {
-	console.log(state)
 	return {
 		logs: state.logs,
 		loading: state.loading,
@@ -50,6 +50,7 @@ const mapDispatchToProps = (dispatch) => {
 	}
 }
 
+// Connect is an HOC, which means it wraps our component and returns a new one that has access to state and the functions
 const ConnectedLogs = connect(mapStateToProps, mapDispatchToProps)(Logs)
 
 export default ConnectedLogs
