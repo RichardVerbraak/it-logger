@@ -1,16 +1,37 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import M from 'materialize-css/dist/js/materialize.min.js'
+import { updateLog } from '../actions/logs'
 
-const EditLogModal = () => {
+const EditLogModal = ({ current, updateLog }) => {
 	const [message, setMessage] = useState('')
 	const [attention, setAttention] = useState(false)
 	const [tech, setTech] = useState('')
+
+	useEffect(() => {
+		if (current) {
+			setMessage(current.message)
+			setAttention(current.attention)
+			setTech(current.tech)
+		}
+	}, [current])
 
 	const onSubmit = () => {
 		if (message === '' || tech === '') {
 			M.toast({ html: 'Please enter a message and tech' })
 		} else {
-			console.log(message, tech, attention)
+			// Forgot the id before this so it didnt know which one to update
+			const updatedLog = {
+				id: current.id,
+				message,
+				attention,
+				tech,
+				date: new Date(),
+			}
+
+			updateLog(updatedLog)
+			M.toast({ html: `Log updated by ${tech}` })
 
 			// Clear fields
 			setMessage('')
@@ -33,9 +54,6 @@ const EditLogModal = () => {
 								setMessage(e.target.value)
 							}}
 						/>
-						<label htmlFor='message' className='active'>
-							Log Message
-						</label>
 					</div>
 				</div>
 
@@ -68,7 +86,7 @@ const EditLogModal = () => {
 									className='filled-in'
 									checked={attention}
 									value={attention}
-									onChange={(e) => {
+									onChange={() => {
 										setAttention(!attention)
 									}}
 								/>
@@ -97,4 +115,26 @@ const modalStyle = {
 	height: '75%',
 }
 
-export default EditLogModal
+EditLogModal.propTypes = {
+	current: PropTypes.object,
+	updateLog: PropTypes.func.isRequired,
+}
+
+const mapStateToProps = (state) => {
+	return {
+		current: state.current,
+	}
+}
+
+const mapDispatchToProps = (dispatch) => {
+	return {
+		updateLog: (log) => dispatch(updateLog(log)),
+	}
+}
+
+const ConnectedEditLogModal = connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(EditLogModal)
+
+export default ConnectedEditLogModal
