@@ -2,12 +2,14 @@ import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { deleteTech } from '../actions/techs'
+import M from 'materialize-css/dist/js/materialize.min.js'
 
 const TechItem = ({ tech, deleteTech }) => {
 	const { firstName, lastName } = tech
 
 	const onDelete = () => {
 		deleteTech(tech.id)
+		M.toast({ html: 'Technician deleted' })
 	}
 
 	return (
