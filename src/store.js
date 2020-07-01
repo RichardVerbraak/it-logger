@@ -1,7 +1,8 @@
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware, combineReducers } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
 import logsReducer from './reducers/logs'
+import techsReducer from './reducers/techs'
 
 // No clue why Brad added this here
 const initialState = {}
@@ -10,7 +11,10 @@ const initialState = {}
 const middleware = [thunk]
 
 const store = createStore(
-	logsReducer,
+	combineReducers({
+		logs: logsReducer,
+		techs: techsReducer,
+	}),
 	composeWithDevTools(applyMiddleware(...middleware))
 )
 

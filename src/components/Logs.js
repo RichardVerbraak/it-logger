@@ -40,8 +40,8 @@ Logs.propTypes = {
 
 const mapStateToProps = (state) => {
 	return {
-		logs: state.logs,
-		loading: state.loading,
+		logs: state.logs.logs,
+		loading: state.logs.loading,
 	}
 }
 
