@@ -1,40 +1,40 @@
 {
-  "logs": [
-    {
-      "message": "asdadsads",
-      "attention": false,
-      "tech": "Sam Smith",
-      "date": "2020-06-29T18:22:51.984Z",
-      "id": 1
-    },
-    {
-      "id": 2,
-      "message": "fixed 002 hard drive",
-      "attention": false,
-      "tech": "John Doe",
-      "date": "2020-06-30T14:20:38.239Z"
-    }
-  ],
-  "techs": [
-    {
-      "id": 1,
-      "firstName": "John",
-      "lastName": "Doe"
-    },
-    {
-      "id": 2,
-      "firstName": "Sam",
-      "lastName": "Smith"
-    },
-    {
-      "id": 3,
-      "firstName": "Sarah",
-      "lastName": "Wilson"
-    },
-    {
-      "firstName": "Bobby",
-      "lastName": "Hill",
-      "id": 4
-    }
-  ]
+	"logs": [
+		{
+			"message": "asdadsads",
+			"attention": false,
+			"tech": "Sam Smith",
+			"date": "2020-06-29T18:22:51.984Z",
+			"id": 1
+		},
+		{
+			"id": 2,
+			"message": "fixed 002 hard drive",
+			"attention": false,
+			"tech": "John Doe",
+			"date": "2020-06-30T14:20:38.239Z"
+		}
+	],
+	"techs": [
+		{
+			"id": 1,
+			"firstName": "John",
+			"lastName": "Doe"
+		},
+		{
+			"id": 2,
+			"firstName": "Sam",
+			"lastName": "Smith"
+		},
+		{
+			"id": 3,
+			"firstName": "Sarah",
+			"lastName": "Wilson"
+		},
+		{
+			"firstName": "Bobby",
+			"lastName": "Hill",
+			"id": 4
+		}
+	]
 }
