@@ -1,26 +1,28 @@
 {
-  "name": "it-logger",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RichardVerbraak/it-logger.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/RichardVerbraak/it-logger/issues"
-  },
-  "homepage": "https://github.com/RichardVerbraak/it-logger#readme",
-  "dependencies": {
-    "config": "^3.3.1",
-    "express": "^4.17.1",
-    "mongoose": "^5.9.21"
-  }
+	"name": "it-logger",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server.js",
+		"server": "nodemon server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/RichardVerbraak/it-logger.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/RichardVerbraak/it-logger/issues"
+	},
+	"homepage": "https://github.com/RichardVerbraak/it-logger#readme",
+	"dependencies": {
+		"config": "^3.3.1",
+		"express": "^4.17.1",
+		"mongoose": "^5.9.21",
+		"nodemon": "^2.0.4"
+	}
 }
