@@ -4,6 +4,8 @@ const initialState = {
 	error: null,
 }
 
+// Filters by _id instead of id due to mongoDB
+
 const techsReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case 'GET_TECHS':

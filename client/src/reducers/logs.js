@@ -32,7 +32,7 @@ const logsReducer = (state = initialState, action) => {
 			return {
 				...state,
 				logs: state.logs.map((log) => {
-					return action.payload.id === log.id ? action.payload : log
+					return action.payload._id === log._id ? action.payload : log
 				}),
 			}
 		case 'SET_CURRENT':

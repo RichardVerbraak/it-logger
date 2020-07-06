@@ -120,7 +120,7 @@ export const updateLog = (log) => {
 		try {
 			setLoading()
 
-			const res = await fetch(`/logs/${log.id}`, {
+			const res = await fetch(`/logs/${log._id}`, {
 				method: 'PUT',
 				body: JSON.stringify(log),
 				headers: {

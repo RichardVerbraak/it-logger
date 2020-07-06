@@ -24,11 +24,11 @@ const EditLogModal = ({ current, updateLog }) => {
 		} else {
 			// Forgot the id before this so it didnt know which one to update
 			const updatedLog = {
-				id: current.id,
+				_id: current._id,
 				message,
 				attention,
 				tech,
-				date: new Date(),
+				date: Date.now,
 			}
 
 			updateLog(updatedLog)
