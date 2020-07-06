@@ -19,7 +19,6 @@
 	},
 	"scripts": {
 		"start": "react-scripts start",
-		"json-server": "json-server --watch db.json --port 5000",
 		"dev": "concurrently \"npm start\" \"npm run json-server\"",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
@@ -40,8 +39,6 @@
 			"last 1 safari version"
 		]
 	},
-	"devDependencies": {
-		"json-server": "^0.16.1"
-	},
+	"devDependencies": {},
 	"proxy": "http://localhost:5000"
 }
