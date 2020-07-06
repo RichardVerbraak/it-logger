@@ -25,7 +25,7 @@ const Logs = ({ loading, logs, getLogs }) => {
 				<p className='center'>No logs to show...</p>
 			) : (
 				logs.map((log) => {
-					return <LogItem log={log} key={log.id} />
+					return <LogItem log={log} key={log._id} />
 				})
 			)}
 		</ul>

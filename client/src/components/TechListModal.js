@@ -20,7 +20,7 @@ const TechListModal = ({ techs, loading, getTechs }) => {
 						techs.map((tech) => {
 							return (
 								<TechItem
-									key={tech.id}
+									key={tech._id}
 									tech={tech}
 									className='collection-item'
 								/>

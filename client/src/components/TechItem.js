@@ -8,7 +8,7 @@ const TechItem = ({ tech, deleteTech }) => {
 	const { firstName, lastName } = tech
 
 	const onDelete = () => {
-		deleteTech(tech.id)
+		deleteTech(tech._id)
 		M.toast({ html: 'Technician deleted' })
 	}
 

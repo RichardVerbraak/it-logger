@@ -21,7 +21,7 @@ const techsReducer = (state = initialState, action) => {
 			return {
 				...state,
 				techs: state.techs.filter((tech) => {
-					return tech.id !== action.payload
+					return tech._id !== action.payload
 				}),
 				loading: false,
 			}

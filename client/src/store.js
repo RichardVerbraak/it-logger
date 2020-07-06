@@ -5,7 +5,7 @@ import logsReducer from './reducers/logs'
 import techsReducer from './reducers/techs'
 
 // No clue why Brad added this here
-const initialState = {}
+// const initialState = {}
 
 // Array of our middleware
 const middleware = [thunk]

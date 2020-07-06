@@ -27,9 +27,9 @@ router.post('/', async (req, res) => {
 	}
 })
 
-router.delete('/', async (req, res) => {
+router.delete('/:id', async (req, res) => {
 	try {
-		await Tech.findByIdAndRemove(req.body.id)
+		await Tech.findByIdAndRemove(req.params.id)
 		res.json('User got deleted')
 	} catch (error) {
 		console.log(error.message)

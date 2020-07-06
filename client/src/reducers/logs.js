@@ -23,7 +23,7 @@ const logsReducer = (state = initialState, action) => {
 			return {
 				...state,
 				logs: state.logs.filter((log) => {
-					return log.id !== action.payload
+					return log._id !== action.payload
 				}),
 				loading: false,
 			}
